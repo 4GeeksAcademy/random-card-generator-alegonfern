@@ -12,25 +12,25 @@ const values = [
   "8",
   "9",
   "10",
-  "J",
-  "Q",
-  "K",
-  "A"
+  "Jota",
+  "Reina",
+  "Rey",
+  "Ass"
 ];
 
-function getRandomCard() {
+function cartaRandom() {
   const randomSuit = suits[Math.floor(Math.random() * suits.length)];
   const randomValue = values[Math.floor(Math.random() * values.length)];
   return `${randomValue} ${randomSuit}`;
 }
 
-function updateCard() {
+function cartaActualizar() {
   const cardElement = document.getElementById("card");
-  cardElement.innerHTML = getRandomCard();
+  cardElement.innerHTML = cartaRandom();
 }
 
 // Actualizar la carta aleatoriamente al cargar la página
-updateCard();
+cartaActualizar();
 
 // Actualizar la carta aleatoriamente cada vez que el sitio web se actualice
 window.addEventListener("load", function() {});
