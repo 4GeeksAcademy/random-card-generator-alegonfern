@@ -1,8 +1,8 @@
 /* eslint-disable */
 import "bootstrap";
 import "./styles.css";
-const suits = ["&hearts;", "&spades;", "&clubs;", "&diams;"];
-const values = [
+const palo = ["&hearts;", "&spades;", "&clubs;", "&diams;"];
+const valores = [
   "2",
   "3",
   "4",
@@ -19,9 +19,9 @@ const values = [
 ];
 
 function cartaRandom() {
-  const randomSuit = suits[Math.floor(Math.random() * suits.length)];
-  const randomValue = values[Math.floor(Math.random() * values.length)];
-  return `${randomValue} ${randomSuit}`;
+  const randomPalo = palo[Math.floor(Math.random() * palo.length)];
+  const randomValores = valores[Math.floor(Math.random() * valores.length)];
+  return `${randomValores} ${randomPalo}`;
 }
 
 function cartaActualizar() {
@@ -29,8 +29,8 @@ function cartaActualizar() {
   cardElement.innerHTML = cartaRandom();
 }
 
-// Actualizar la carta aleatoriamente al cargar la página
+// Actualizar la
 cartaActualizar();
 
-// Actualizar la carta aleatoriamente cada vez que el sitio web se actualice
+// Actualizar al f4
 window.addEventListener("load", function() {});
